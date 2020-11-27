@@ -1,0 +1,43 @@
+[package]
+name = "ibus-sys"
+version = "0.0.1"
+links = "\"ibus-1.0\""
+build = "build.rs"
+[package.metadata.system-deps.ibus_1_0]
+name = "ibus-1.0"
+version = "1.0"
+
+[package.metadata.system-deps.ibus_1_0.v1_5_3]
+version = "1.5.3"
+
+[package.metadata.system-deps.ibus_1_0.v1_5_18]
+version = "1.5.18"
+[package.metadata.docs.rs]
+features = ["dox"]
+
+[lib]
+name = "ibus_sys"
+
+[dependencies]
+libc = "0.2"
+
+[dependencies.gio-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[dependencies.glib-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[dependencies.gobject-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[build-dependencies]
+system-deps = "2.0"
+
+[dev-dependencies]
+shell-words = "1.0.0"
+tempfile = "3"
+
+[features]
+v1_5_3 = []
+v1_5_18 = ["v1_5_3"]
+dox = []

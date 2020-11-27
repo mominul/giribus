@@ -1,0 +1,11 @@
+[options]
+library = "IBus"
+version = "1.0"
+target_path = "."
+min_cfg_version = "1.0"
+
+external_libraries = [
+    "Gio",
+    "GLib",
+    "GObject",
+]
